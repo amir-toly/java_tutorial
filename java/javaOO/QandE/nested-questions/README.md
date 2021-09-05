@@ -1,3 +1,8 @@
+From within this folder, issue the following commands:
+
+	javac DataStructure.java
+	java DataStructure
+
 # Questions and Exercises: Nested Classes (from https://docs.oracle.com/javase/tutorial/java/javaOO/QandE/nested-questions.html)
 
 Questions
