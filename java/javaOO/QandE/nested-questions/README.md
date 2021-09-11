@@ -6,6 +6,7 @@ From within this folder, issue the following commands:
 # Questions and Exercises: Nested Classes (from https://docs.oracle.com/javase/tutorial/java/javaOO/QandE/nested-questions.html)
 
 Questions
+
 	1. The program Problem.java doesn't compile. What do you need to do to make it compile? Why?
 
 	2. Use the Java API documentation for the Box class (in the javax.swing package) to help you answer the following questions.
@@ -21,6 +22,7 @@ Questions
 		e. How do you create an instance of Box's Filler class?
 
 Exercises
+
 	1. Get the file Class1.java. Compile and run Class1. What is the output?
 
 	2. The following exercises involve modifying the class DataStructure.java, which the section Inner Class Example discusses.
