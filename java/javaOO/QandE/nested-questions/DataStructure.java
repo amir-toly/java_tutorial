@@ -33,7 +33,7 @@ public class DataStructure {
     
     // Create an array
     private final static int SIZE = 15;
-    private static int[] arrayOfInts = new int[SIZE];
+    private int[] arrayOfInts = new int[SIZE];
     
     public DataStructure() {
         // fill the array with ascending integer values
@@ -45,15 +45,7 @@ public class DataStructure {
     public void printEven() {
         
         // Print out values of even indices of the array
-        DataStructureIterator iterator = new EvenIterator();
-        while (iterator.hasNext()) {
-            System.out.print(iterator.next() + " ");
-        }
-        System.out.println();
-    }
-    
-    public void print(DataStructureIterator iterator) {
-        
+        DataStructureIterator iterator = this.new EvenIterator();
         while (iterator.hasNext()) {
             System.out.print(iterator.next() + " ");
         }
@@ -65,7 +57,7 @@ public class DataStructure {
     // Inner class implements the DataStructureIterator interface,
     // which extends the Iterator<Integer> interface
     
-    private static class EvenIterator implements DataStructureIterator {
+    private class EvenIterator implements DataStructureIterator {
         
         // Start stepping through the array from the beginning
         private int nextIndex = 0;
@@ -96,7 +88,7 @@ public class DataStructure {
         System.out.println("Results of `ds.printEven();`:");
         ds.printEven();
         
-        System.out.println("Results of `ds.print(new EvenIterator());`:");
-        ds.print(new EvenIterator());
+        //System.out.println("Results of `ds.print(new EvenIterator());`:");
+        //ds.print(new EvenIterator());
     }
 }
