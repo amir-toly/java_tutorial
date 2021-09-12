@@ -109,7 +109,7 @@ public class DataStructure {
         
         System.out.println("Results of `ds.print(new DataStructureIterator() {...});`:");
         ds.print(new DataStructureIterator() {
-            private int nextIndex = 0;
+            private int nextIndex = 1;
         
             public boolean hasNext() {
                 
@@ -119,10 +119,10 @@ public class DataStructure {
             
             public Integer next() {
                 
-                // Record a value of an even index of the array
+                // Record a value of an odd index of the array
                 Integer retValue = Integer.valueOf(ds.getArrayOfInts()[nextIndex]);
                 
-                // Get the next even element
+                // Get the next odd element
                 nextIndex += 2;
                 return retValue;
             }
