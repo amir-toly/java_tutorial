@@ -33,13 +33,17 @@ public class DataStructure {
     
     // Create an array
     private final static int SIZE = 15;
-    private static int[] arrayOfInts = new int[SIZE];
+    private int[] arrayOfInts = new int[SIZE];
     
     public DataStructure() {
         // fill the array with ascending integer values
         for (int i = 0; i < SIZE; i++) {
             arrayOfInts[i] = i;
         }
+    }
+    
+    private int[] getArrayOfInts() {
+        return arrayOfInts;
     }
     
     private EvenIterator getNewEvenIterator() {
@@ -116,7 +120,7 @@ public class DataStructure {
             public Integer next() {
                 
                 // Record a value of an even index of the array
-                Integer retValue = Integer.valueOf(arrayOfInts[nextIndex]);
+                Integer retValue = Integer.valueOf(ds.getArrayOfInts()[nextIndex]);
                 
                 // Get the next even element
                 nextIndex += 2;
