@@ -68,6 +68,16 @@ public class DataStructure {
         System.out.println();
     }
     
+    public void print(java.util.function.Function<Integer, Boolean> iterator) {
+        
+        for (int i = 0; i < arrayOfInts.length; i++) {
+            if (iterator.apply(i)) {
+                System.out.print(arrayOfInts[i] + " ");
+            }
+        }
+        System.out.println();
+    }
+    
     interface DataStructureIterator extends java.util.Iterator<Integer> { } 
 
     // Inner class implements the DataStructureIterator interface,
@@ -127,5 +137,11 @@ public class DataStructure {
                 return retValue;
             }
         });
+        
+        System.out.println("Results of `ds.print(indexOfArray -> indexOfArray % 2 == 0);`:");
+        ds.print(indexOfArray -> indexOfArray % 2 == 0);
+        
+        System.out.println("Results of `ds.print(indexOfArray -> indexOfArray % 2 != 0);`:");
+        ds.print(indexOfArray -> indexOfArray % 2 != 0);
     }
 }

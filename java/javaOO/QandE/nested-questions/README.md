@@ -31,7 +31,7 @@ Exercises
 
 		~~b. Invoke the method print(DataStructureIterator iterator) so that it prints elements that have an odd index value. Use an anonymous class as the method's argument instead of an instance of the interface DataStructureIterator.~~
 
-		c. Define a method named print(java.util.function.Function<Integer, Boolean> iterator) that performs the same function as print(DataStructureIterator iterator). Invoke this method with a lambda expression to print elements that have an even index value. Invoke this method again with a lambda expression to print elements that have an odd index value.
+		~~c. Define a method named print(java.util.function.Function<Integer, Boolean> iterator) that performs the same function as print(DataStructureIterator iterator). Invoke this method with a lambda expression to print elements that have an even index value. Invoke this method again with a lambda expression to print elements that have an odd index value.~~
 
 		d. Define two methods so that the following two statements print elements that have an even index value and elements that have an odd index value:
 
