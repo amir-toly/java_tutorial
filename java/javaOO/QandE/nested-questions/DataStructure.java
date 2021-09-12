@@ -42,10 +42,22 @@ public class DataStructure {
         }
     }
     
+    private EvenIterator getNewEvenIterator() {
+        return new EvenIterator();
+    }
+    
     public void printEven() {
         
         // Print out values of even indices of the array
-        DataStructureIterator iterator = this.new EvenIterator();
+        DataStructureIterator iterator = getNewEvenIterator();
+        while (iterator.hasNext()) {
+            System.out.print(iterator.next() + " ");
+        }
+        System.out.println();
+    }
+    
+    public void print(DataStructureIterator iterator) {
+        
         while (iterator.hasNext()) {
             System.out.print(iterator.next() + " ");
         }
@@ -88,7 +100,7 @@ public class DataStructure {
         System.out.println("Results of `ds.printEven();`:");
         ds.printEven();
         
-        //System.out.println("Results of `ds.print(new EvenIterator());`:");
-        //ds.print(new EvenIterator());
+        System.out.println("Results of `ds.print(ds.getNewEvenIterator());`:");
+        ds.print(ds.getNewEvenIterator());
     }
 }
