@@ -87,6 +87,14 @@ public class DataStructure {
         }
         System.out.println();
     }
+
+    private static boolean isEvenIndex(int i) {
+        return i % 2 == 0;
+    }
+
+    private static boolean isOddIndex(int i) {
+        return !isEvenIndex(i);
+    }
     
     interface DataStructureIterator extends java.util.Iterator<Integer> { } 
 
@@ -156,5 +164,11 @@ public class DataStructure {
         
         System.out.println("Results of `ds.printWithPredicate(indexOfArray -> indexOfArray % 2 == 0);`:");
         ds.printWithPredicate(indexOfArray -> indexOfArray % 2 == 0);
+        
+        System.out.println("Results of `ds.print(DataStructure::isEvenIndex);`:");
+        ds.print(DataStructure::isEvenIndex);
+        
+        System.out.println("Results of `ds.print(DataStructure::isOddIndex);`:");
+        ds.print(DataStructure::isOddIndex);
     }
 }
