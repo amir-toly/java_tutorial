@@ -62,7 +62,7 @@ public class Person {
     }
 
     public void printPerson() {
-      System.out.println(name + ", " + this.getAge());
+      System.out.println(this);
     }
     
     public Sex getGender() {
@@ -111,6 +111,15 @@ public class Person {
             Person.Sex.MALE, "bob@example.com"));
         
         return roster;
+    }
+
+    public String toString() {
+        return name + ", " + this.getAge();
+    }
+
+    public static void main(String[] args) {
+        List<Person> roster = createRoster();
+        System.out.println(roster);
     }
     
 }
