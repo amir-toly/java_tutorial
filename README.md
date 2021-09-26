@@ -539,7 +539,7 @@ Questions and Exercises: Interfaces
 Aggregate Operations
 Reduction
 Parallelism
-Questions and Exercises: Aggregate Operations
+[Questions and Exercises: Aggregate Operations](collections/streams/QandE/questions/)
 Implementations
 Set Implementations
 List Implementations
