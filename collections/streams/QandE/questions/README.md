@@ -1,3 +1,8 @@
+From within this folder, issue the following commands:
+
+	javac Person.java
+	java Person
+
 # Questions and Exercises: Aggregate Operations (from https://docs.oracle.com/javase/tutorial/collections/streams/QandE/questions.html)
 
 Questions
