@@ -42,8 +42,8 @@ public class DataStructure {
         }
     }
     
-    private int[] getArrayOfInts() {
-        return arrayOfInts;
+    private int get(int index) {
+        return arrayOfInts[index];
     }
     
     private EvenIterator getNewEvenIterator() {
@@ -148,7 +148,7 @@ public class DataStructure {
             public Integer next() {
                 
                 // Record a value of an odd index of the array
-                Integer retValue = Integer.valueOf(ds.getArrayOfInts()[nextIndex]);
+                Integer retValue = Integer.valueOf(ds.get(nextIndex));
                 
                 // Get the next odd element
                 nextIndex += 2;
