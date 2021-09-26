@@ -70,7 +70,7 @@ public class DataStructure {
     
     public void print(java.util.function.Function<Integer, Boolean> iterator) {
         
-        for (int i = 0; i < arrayOfInts.length; i++) {
+        for (int i = 0; i < SIZE; i++) {
             if (iterator.apply(i)) {
                 System.out.print(arrayOfInts[i] + " ");
             }
@@ -80,7 +80,7 @@ public class DataStructure {
     
     public void printWithPredicate(java.util.function.Predicate<Integer> iterator) {
         
-        for (int i = 0; i < arrayOfInts.length; i++) {
+        for (int i = 0; i < SIZE; i++) {
             if (iterator.test(i)) {
                 System.out.print(arrayOfInts[i] + " ");
             }
