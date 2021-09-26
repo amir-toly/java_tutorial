@@ -115,7 +115,7 @@ public class DataStructure {
         public Integer next() {
             
             // Record a value of an even index of the array
-            Integer retValue = Integer.valueOf(arrayOfInts[nextIndex]);
+            Integer retValue = get(nextIndex);
             
             // Get the next even element
             nextIndex += 2;
@@ -148,7 +148,7 @@ public class DataStructure {
             public Integer next() {
                 
                 // Record a value of an odd index of the array
-                Integer retValue = Integer.valueOf(ds.get(nextIndex));
+                Integer retValue = ds.get(nextIndex);
                 
                 // Get the next odd element
                 nextIndex += 2;
