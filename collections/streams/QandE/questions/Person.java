@@ -119,7 +119,18 @@ public class Person {
 
     public static void main(String[] args) {
         List<Person> roster = createRoster();
-        System.out.println(roster);
+        
+        System.out.println("");
+        System.out.println("Printing the whole roster: " + roster);
+        
+        System.out.println("");
+        System.out.println("Printing males using 'enhanced' for loop:");
+        
+        for (Person p : roster) {
+            if (p.getGender() == Person.Sex.MALE) {
+                System.out.println(p.getName());
+            }
+        }
     }
     
 }
