@@ -138,7 +138,7 @@ public class Person {
         roster
             .stream()
             .filter(p -> p.getGender() == Person.Sex.MALE)
-            .forEach(p -> System.out.println(p.getName()));
+            .forEach(Person::printPerson);
     }
     
 }
