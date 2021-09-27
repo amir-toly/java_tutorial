@@ -43,13 +43,13 @@ Questions
 
 Exercises
 
-	1. Write the following enhanced for statement as a pipeline with lambda expressions. Hint: Use the filter intermediate operation and the forEach terminal operation.
+	~~1. Write the following enhanced for statement as a pipeline with lambda expressions. Hint: Use the filter intermediate operation and the forEach terminal operation.
 
 		for (Person p : roster) {
 			if (p.getGender() == Person.Sex.MALE) {
 				System.out.println(p.getName());
 			}
-		}
+		}~~
 
 	2. Convert the following code into a new implementation that uses lambda expressions and aggregate operations instead of nested for loops. Hint: Make a pipeline that invokes the filter, sorted, and collect operations, in that order.
 

@@ -131,6 +131,14 @@ public class Person {
                 System.out.println(p.getName());
             }
         }
+        
+        System.out.println("");
+        System.out.println("Printing males using a pipeline:");
+        
+        roster
+            .stream()
+            .filter(p -> p.getGender() == Person.Sex.MALE)
+            .forEach(p -> System.out.println(p.getName()));
     }
     
 }
