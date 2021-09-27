@@ -139,6 +139,13 @@ public class Person {
             .stream()
             .filter(p -> p.getGender() == Person.Sex.MALE)
             .forEach(Person::printPerson);
+        
+        System.out.println("");
+        Album a = new Album();
+        a.name = "Album A";
+        a.tracks.add(new Track());
+
+        System.out.println(a);
     }
     
 }
