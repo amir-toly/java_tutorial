@@ -113,6 +113,25 @@ public class Person {
         return roster;
     }
 
+    public static List<Album> createAlbums() {
+        
+        final int MAX_RATING = 5;
+
+        List<Album> albums = new ArrayList<>();
+        
+        for (int i = 0; i < MAX_RATING; i++) {
+            Track[] tracks = new Track[MAX_RATING - i];
+            
+            for (int j = 0; j < tracks.length; j++) {
+                tracks[j] = new Track(i % 2 == 0 ? j : MAX_RATING - j);
+            }
+
+            albums.add(new Album("Album " + (char)('Z' - i), tracks));
+        }
+        
+        return albums;
+    }
+
     public String toString() {
         return name + ", " + this.getAge();
     }
@@ -141,9 +160,9 @@ public class Person {
             .forEach(Person::printPerson);
         
         System.out.println("");
-        Album a = new Album("Album A", new Track(3));
+        List<Album> albums = createAlbums();
 
-        System.out.println(a);
+        System.out.println(albums);
     }
     
 }
