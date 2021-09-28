@@ -31,6 +31,8 @@
  
 import java.util.List;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.time.chrono.IsoChronology;
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
@@ -158,11 +160,33 @@ public class Person {
             .stream()
             .filter(p -> p.getGender() == Person.Sex.MALE)
             .forEach(Person::printPerson);
+
+        List<Album> albums = createAlbums();
         
         System.out.println("");
-        List<Album> albums = createAlbums();
-
+        System.out.println("Printing the whole list of albums:");
         System.out.println(albums);
+
+        List<Album> favs = new ArrayList<>();
+        for (Album a : albums) {
+            boolean hasFavorite = false;
+            for (Track t : a.tracks) {
+                if (t.rating >= 4) {
+                    hasFavorite = true;
+                    break;
+                }
+            }
+            if (hasFavorite)
+                favs.add(a);
+        }
+        Collections.sort(favs, new Comparator<Album>() {
+                                public int compare(Album a1, Album a2) {
+                                    return a1.name.compareTo(a2.name);
+                                }});
+        
+        System.out.println("");
+        System.out.println("Printing favourite albums, obtained from nested for loops:");
+        System.out.println(favs);
     }
     
 }
