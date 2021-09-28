@@ -141,9 +141,7 @@ public class Person {
             .forEach(Person::printPerson);
         
         System.out.println("");
-        Album a = new Album();
-        a.name = "Album A";
-        a.tracks.add(new Track());
+        Album a = new Album("Album A", new Track(3));
 
         System.out.println(a);
     }
