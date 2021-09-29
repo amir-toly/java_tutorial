@@ -33,6 +33,7 @@ import java.util.List;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.stream.Collectors;
 import java.time.chrono.IsoChronology;
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
@@ -187,6 +188,18 @@ public class Person {
         System.out.println("");
         System.out.println("Printing favourite albums, obtained from nested for loops:");
         System.out.println(favs);
+
+        List<Album> favourites = albums
+            .stream()
+            .filter(a -> a.tracks
+                .stream()
+                .anyMatch(t -> t.rating >= 4))
+            .sorted((a, b) -> a.name.compareTo(b.name))
+            .collect(Collectors.toList());
+        
+        System.out.println("");
+        System.out.println("Printing favourite albums, obtained from lambda expressions and aggregate operations:");
+        System.out.println(favourites);
     }
     
 }

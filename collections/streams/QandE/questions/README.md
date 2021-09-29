@@ -51,7 +51,7 @@ Exercises
 			}
 		}~~
 
-	2. Convert the following code into a new implementation that uses lambda expressions and aggregate operations instead of nested for loops. Hint: Make a pipeline that invokes the filter, sorted, and collect operations, in that order.
+	~~2. Convert the following code into a new implementation that uses lambda expressions and aggregate operations instead of nested for loops. Hint: Make a pipeline that invokes the filter, sorted, and collect operations, in that order.
 
 		List<Album> favs = new ArrayList<>();
 		for (Album a : albums) {
@@ -68,4 +68,4 @@ Exercises
 		Collections.sort(favs, new Comparator<Album>() {
 								public int compare(Album a1, Album a2) {
 									return a1.name.compareTo(a2.name);
-								}});
+								}});~~
