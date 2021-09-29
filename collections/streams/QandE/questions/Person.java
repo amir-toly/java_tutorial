@@ -194,7 +194,7 @@ public class Person {
             .filter(a -> a.tracks
                 .stream()
                 .anyMatch(t -> t.rating >= 4))
-            .sorted((a, b) -> a.name.compareTo(b.name))
+            .sorted(Comparator.comparing(a -> a.name))
             .collect(Collectors.toList());
         
         System.out.println("");
